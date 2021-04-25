@@ -3,3 +3,6 @@
 
 # jetbrains ide settings
 /.idea
+
+# ipython notebook checkpoints
+/.ipynb_checkpoints
