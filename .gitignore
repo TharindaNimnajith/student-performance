@@ -1,0 +1,5 @@
+# vscode settings
+/.vscode
+
+# jetbrains ide settings
+/.idea
