@@ -1,4 +1,4 @@
-setwd(paste0(getwd(), '/dataset'))
+setwd(paste0(getwd(), '/dataset/original'))
 
 d1 <- read.table('student-mat.csv', sep = ';', header = TRUE)
 d2 <- read.table('student-por.csv', sep = ';', header = TRUE)
