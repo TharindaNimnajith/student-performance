@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>student_mat_dataset_analysis</title>
+    <title>data_preprocessing</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
@@ -19738,14 +19738,33 @@ all of MD as it is not optimized for dense, information rich UIs.
     </div>
 
 </div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">head</span><span class="p">()</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_por</span> <span class="o">=</span> <span
+                            class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span
+                            class="p">(</span><span class="s1">&#39;../dataset/original/student-por.csv&#39;</span><span
+                            class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span
+                            class="p">)</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_por</span>
 </pre>
                     </div>
 
@@ -19762,7 +19781,373 @@ all of MD as it is not optimized for dense, information rich UIs.
             <div class="jp-OutputArea-child">
 
 
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+                <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
+                     data-mime-type="text/html">
+                    <div>
+                        <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                                vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                                vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                                text-align: right;
+                            }
+                        </style>
+                        <table border="1" class="dataframe">
+                            <thead>
+                            <tr style="text-align: right;">
+                                <th></th>
+                                <th>school</th>
+                                <th>sex</th>
+                                <th>age</th>
+                                <th>address</th>
+                                <th>famsize</th>
+                                <th>Pstatus</th>
+                                <th>Medu</th>
+                                <th>Fedu</th>
+                                <th>Mjob</th>
+                                <th>Fjob</th>
+                                <th>...</th>
+                                <th>famrel</th>
+                                <th>freetime</th>
+                                <th>goout</th>
+                                <th>Dalc</th>
+                                <th>Walc</th>
+                                <th>health</th>
+                                <th>absences</th>
+                                <th>G1</th>
+                                <th>G2</th>
+                                <th>G3</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>0</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>A</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>at_home</td>
+                                <td>teacher</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>11</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>17</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>at_home</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>9</td>
+                                <td>11</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>15</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>at_home</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>12</td>
+                                <td>13</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>15</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>health</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>14</td>
+                                <td>14</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>16</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>other</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>11</td>
+                                <td>13</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <th>644</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>19</td>
+                                <td>R</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>services</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>645</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>teacher</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>15</td>
+                                <td>15</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <th>646</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>other</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <th>647</th>
+                                <td>MS</td>
+                                <td>M</td>
+                                <td>17</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>services</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>648</th>
+                                <td>MS</td>
+                                <td>M</td>
+                                <td>18</td>
+                                <td>R</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>services</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>11</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>649 rows × 33 columns</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span> <span
+                            class="o">=</span> <span class="n">pd</span><span class="o">.</span><span
+                            class="n">concat</span><span class="p">([</span><span class="n">df_mat</span><span
+                            class="p">,</span> <span class="n">df_por</span><span class="p">])</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+
+
+        <div class="jp-OutputArea jp-Cell-outputArea">
+
+            <div class="jp-OutputArea-child">
+
+
+                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
                 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
@@ -19929,116 +20314,104 @@ all of MD as it is not optimized for dense, information rich UIs.
                                 <td>10</td>
                                 <td>10</td>
                             </tr>
-                            </tbody>
-                        </table>
-                        <p>5 rows × 33 columns</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-        <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">tail</span><span class="p">()</span>
-</pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-
-
-        <div class="jp-OutputArea jp-Cell-outputArea">
-
-            <div class="jp-OutputArea-child">
-
-
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-
-
-                <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
-                     data-mime-type="text/html">
-                    <div>
-                        <style scoped>
-                            .dataframe tbody tr th:only-of-type {
-                                vertical-align: middle;
-                            }
-
-                            .dataframe tbody tr th {
-                                vertical-align: top;
-                            }
-
-                            .dataframe thead th {
-                                text-align: right;
-                            }
-                        </style>
-                        <table border="1" class="dataframe">
-                            <thead>
-                            <tr style="text-align: right;">
-                                <th></th>
-                                <th>school</th>
-                                <th>sex</th>
-                                <th>age</th>
-                                <th>address</th>
-                                <th>famsize</th>
-                                <th>Pstatus</th>
-                                <th>Medu</th>
-                                <th>Fedu</th>
-                                <th>Mjob</th>
-                                <th>Fjob</th>
-                                <th>...</th>
-                                <th>famrel</th>
-                                <th>freetime</th>
-                                <th>goout</th>
-                                <th>Dalc</th>
-                                <th>Walc</th>
-                                <th>health</th>
-                                <th>absences</th>
-                                <th>G1</th>
-                                <th>G2</th>
-                                <th>G3</th>
-                            </tr>
-                            </thead>
-                            <tbody>
                             <tr>
-                                <th>390</th>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <th>644</th>
                                 <td>MS</td>
-                                <td>M</td>
-                                <td>20</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>A</td>
+                                <td>F</td>
+                                <td>19</td>
+                                <td>R</td>
+                                <td>GT3</td>
+                                <td>T</td>
                                 <td>2</td>
-                                <td>2</td>
+                                <td>3</td>
                                 <td>services</td>
-                                <td>services</td>
+                                <td>other</td>
                                 <td>...</td>
                                 <td>5</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
                                 <td>5</td>
                                 <td>4</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>4</td>
+                                <td>10</td>
                                 <td>11</td>
-                                <td>9</td>
-                                <td>9</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>645</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>teacher</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>15</td>
+                                <td>15</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <th>646</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>other</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>11</td>
+                                <td>12</td>
                                 <td>9</td>
                             </tr>
                             <tr>
-                                <th>391</th>
+                                <th>647</th>
                                 <td>MS</td>
                                 <td>M</td>
                                 <td>17</td>
@@ -20056,37 +20429,13 @@ all of MD as it is not optimized for dense, information rich UIs.
                                 <td>3</td>
                                 <td>4</td>
                                 <td>2</td>
-                                <td>3</td>
-                                <td>14</td>
-                                <td>16</td>
-                                <td>16</td>
-                            </tr>
-                            <tr>
-                                <th>392</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>21</td>
-                                <td>R</td>
-                                <td>GT3</td>
-                                <td>T</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>other</td>
-                                <td>other</td>
-                                <td>...</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
+                                <td>6</td>
                                 <td>10</td>
-                                <td>8</td>
-                                <td>7</td>
+                                <td>10</td>
+                                <td>10</td>
                             </tr>
                             <tr>
-                                <th>393</th>
+                                <th>648</th>
                                 <td>MS</td>
                                 <td>M</td>
                                 <td>18</td>
@@ -20104,197 +20453,17 @@ all of MD as it is not optimized for dense, information rich UIs.
                                 <td>3</td>
                                 <td>4</td>
                                 <td>5</td>
-                                <td>0</td>
-                                <td>11</td>
-                                <td>12</td>
+                                <td>4</td>
                                 <td>10</td>
-                            </tr>
-                            <tr>
-                                <th>394</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>19</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>T</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>other</td>
-                                <td>at_home</td>
-                                <td>...</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>8</td>
-                                <td>9</td>
-                                <td>9</td>
+                                <td>11</td>
+                                <td>11</td>
                             </tr>
                             </tbody>
                         </table>
-                        <p>5 rows × 33 columns</p>
+                        <p>1044 rows × 33 columns</p>
                     </div>
                 </div>
 
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-        <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">shape</span>
-</pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-
-
-        <div class="jp-OutputArea jp-Cell-outputArea">
-
-            <div class="jp-OutputArea-child">
-
-
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
-
-
-                <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
-                     data-mime-type="text/plain">
-                    <pre>(395, 33)</pre>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-        <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">shape</span><span class="p">[</span><span
-                            class="mi">0</span><span class="p">]</span>
-</pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-
-
-        <div class="jp-OutputArea jp-Cell-outputArea">
-
-            <div class="jp-OutputArea-child">
-
-
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
-
-
-                <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
-                     data-mime-type="text/plain">
-                    <pre>395</pre>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-        <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-
-
-        <div class="jp-OutputArea jp-Cell-outputArea">
-
-            <div class="jp-OutputArea-child">
-
-
-                <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-                <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 395 entries, 0 to 394
-Data columns (total 33 columns):
- #   Column      Non-Null Count  Dtype
----  ------      --------------  -----
- 0   school      395 non-null    object
- 1   sex         395 non-null    object
- 2   age         395 non-null    int64
- 3   address     395 non-null    object
- 4   famsize     395 non-null    object
- 5   Pstatus     395 non-null    object
- 6   Medu        395 non-null    int64
- 7   Fedu        395 non-null    int64
- 8   Mjob        395 non-null    object
- 9   Fjob        395 non-null    object
- 10  reason      395 non-null    object
- 11  guardian    395 non-null    object
- 12  traveltime  395 non-null    int64
- 13  studytime   395 non-null    int64
- 14  failures    395 non-null    int64
- 15  schoolsup   395 non-null    object
- 16  famsup      395 non-null    object
- 17  paid        395 non-null    object
- 18  activities  395 non-null    object
- 19  nursery     395 non-null    object
- 20  higher      395 non-null    object
- 21  internet    395 non-null    object
- 22  romantic    395 non-null    object
- 23  famrel      395 non-null    int64
- 24  freetime    395 non-null    int64
- 25  goout       395 non-null    int64
- 26  Dalc        395 non-null    int64
- 27  Walc        395 non-null    int64
- 28  health      395 non-null    int64
- 29  absences    395 non-null    int64
- 30  G1          395 non-null    int64
- 31  G2          395 non-null    int64
- 32  G3          395 non-null    int64
-dtypes: int64(16), object(17)
-memory usage: 102.0+ KB
-</pre>
-                </div>
             </div>
 
         </div>
@@ -20305,11 +20474,32 @@ memory usage: 102.0+ KB
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span> <span
+                            class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="n">merged_df</span><span
+                            class="o">.</span><span class="n">notna</span><span class="p">()</span><span
+                            class="o">.</span><span class="n">all</span><span class="p">(</span><span
+                            class="n">axis</span><span class="o">=</span><span class="mi">1</span><span
+                            class="p">)]</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat_null</span> <span
-                            class="o">=</span> <span class="n">df_mat</span><span class="p">[</span><span class="n">df_mat</span><span
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df_null</span> <span
+                            class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="n">merged_df</span><span
                             class="o">.</span><span class="n">isnull</span><span class="p">()</span><span
                             class="o">.</span><span class="n">any</span><span class="p">(</span><span
                             class="n">axis</span><span class="o">=</span><span class="mi">1</span><span
@@ -20329,7 +20519,7 @@ memory usage: 102.0+ KB
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat_null</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df_null</span>
 </pre>
                     </div>
 
@@ -20406,42 +20596,21 @@ memory usage: 102.0+ KB
     </div>
 
 </div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat_null</span><span
-                            class="o">.</span><span class="n">shape</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span> <span
+                            class="o">=</span> <span class="n">merged_df</span><span class="o">.</span><span class="n">drop_duplicates</span><span
+                            class="p">()</span>
 </pre>
                     </div>
 
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-
-
-        <div class="jp-OutputArea jp-Cell-outputArea">
-
-            <div class="jp-OutputArea-child">
-
-
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
-
-
-                <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
-                     data-mime-type="text/plain">
-                    <pre>(0, 33)</pre>
-                </div>
-
-            </div>
-
-        </div>
-
     </div>
 
 </div>
@@ -20451,9 +20620,9 @@ memory usage: 102.0+ KB
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat_null</span><span
-                            class="o">.</span><span class="n">shape</span><span class="p">[</span><span
-                            class="mi">0</span><span class="p">]</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span
+                            class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span
+                            class="n">sum</span><span class="p">()</span>
 </pre>
                     </div>
 
@@ -20485,24 +20654,350 @@ memory usage: 102.0+ KB
     </div>
 
 </div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat_not_null</span> <span
-                            class="o">=</span> <span class="n">df_mat</span><span class="p">[</span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">notna</span><span class="p">()</span><span
-                            class="o">.</span><span class="n">all</span><span class="p">(</span><span
-                            class="n">axis</span><span class="o">=</span><span class="mi">1</span><span
-                            class="p">)]</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span>
 </pre>
                     </div>
 
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+
+
+        <div class="jp-OutputArea jp-Cell-outputArea">
+
+            <div class="jp-OutputArea-child">
+
+
+                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+
+
+                <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
+                     data-mime-type="text/html">
+                    <div>
+                        <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                                vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                                vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                                text-align: right;
+                            }
+                        </style>
+                        <table border="1" class="dataframe">
+                            <thead>
+                            <tr style="text-align: right;">
+                                <th></th>
+                                <th>school</th>
+                                <th>sex</th>
+                                <th>age</th>
+                                <th>address</th>
+                                <th>famsize</th>
+                                <th>Pstatus</th>
+                                <th>Medu</th>
+                                <th>Fedu</th>
+                                <th>Mjob</th>
+                                <th>Fjob</th>
+                                <th>...</th>
+                                <th>famrel</th>
+                                <th>freetime</th>
+                                <th>goout</th>
+                                <th>Dalc</th>
+                                <th>Walc</th>
+                                <th>health</th>
+                                <th>absences</th>
+                                <th>G1</th>
+                                <th>G2</th>
+                                <th>G3</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>0</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>A</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>at_home</td>
+                                <td>teacher</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>17</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>at_home</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>15</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>at_home</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>15</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>health</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>15</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>16</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>other</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <th>644</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>19</td>
+                                <td>R</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>services</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>645</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>teacher</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>15</td>
+                                <td>15</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <th>646</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>other</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <th>647</th>
+                                <td>MS</td>
+                                <td>M</td>
+                                <td>17</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>services</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>648</th>
+                                <td>MS</td>
+                                <td>M</td>
+                                <td>18</td>
+                                <td>R</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>services</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>11</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>1044 rows × 33 columns</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
 </div>
@@ -20512,7 +21007,8 @@ memory usage: 102.0+ KB
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat_not_null</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span
+                            class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre>
                     </div>
 
@@ -20696,153 +21192,9 @@ memory usage: 102.0+ KB
                                 <td>10</td>
                                 <td>10</td>
                             </tr>
-                            <tr>
-                                <th>...</th>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                                <td>...</td>
-                            </tr>
-                            <tr>
-                                <th>390</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>20</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>A</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>services</td>
-                                <td>services</td>
-                                <td>...</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>4</td>
-                                <td>11</td>
-                                <td>9</td>
-                                <td>9</td>
-                                <td>9</td>
-                            </tr>
-                            <tr>
-                                <th>391</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>17</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>T</td>
-                                <td>3</td>
-                                <td>1</td>
-                                <td>services</td>
-                                <td>services</td>
-                                <td>...</td>
-                                <td>2</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>14</td>
-                                <td>16</td>
-                                <td>16</td>
-                            </tr>
-                            <tr>
-                                <th>392</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>21</td>
-                                <td>R</td>
-                                <td>GT3</td>
-                                <td>T</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>other</td>
-                                <td>other</td>
-                                <td>...</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>10</td>
-                                <td>8</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <th>393</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>18</td>
-                                <td>R</td>
-                                <td>LE3</td>
-                                <td>T</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>services</td>
-                                <td>other</td>
-                                <td>...</td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>0</td>
-                                <td>11</td>
-                                <td>12</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th>394</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>19</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>T</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>other</td>
-                                <td>at_home</td>
-                                <td>...</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>8</td>
-                                <td>9</td>
-                                <td>9</td>
-                            </tr>
                             </tbody>
                         </table>
-                        <p>395 rows × 33 columns</p>
+                        <p>5 rows × 33 columns</p>
                     </div>
                 </div>
 
@@ -20859,8 +21211,8 @@ memory usage: 102.0+ KB
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat_not_null</span><span
-                            class="o">.</span><span class="n">shape</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span
+                            class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre>
                     </div>
 
@@ -20880,9 +21232,174 @@ memory usage: 102.0+ KB
                 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
-                <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
-                     data-mime-type="text/plain">
-                    <pre>(395, 33)</pre>
+                <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
+                     data-mime-type="text/html">
+                    <div>
+                        <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                                vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                                vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                                text-align: right;
+                            }
+                        </style>
+                        <table border="1" class="dataframe">
+                            <thead>
+                            <tr style="text-align: right;">
+                                <th></th>
+                                <th>school</th>
+                                <th>sex</th>
+                                <th>age</th>
+                                <th>address</th>
+                                <th>famsize</th>
+                                <th>Pstatus</th>
+                                <th>Medu</th>
+                                <th>Fedu</th>
+                                <th>Mjob</th>
+                                <th>Fjob</th>
+                                <th>...</th>
+                                <th>famrel</th>
+                                <th>freetime</th>
+                                <th>goout</th>
+                                <th>Dalc</th>
+                                <th>Walc</th>
+                                <th>health</th>
+                                <th>absences</th>
+                                <th>G1</th>
+                                <th>G2</th>
+                                <th>G3</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>644</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>19</td>
+                                <td>R</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>services</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>645</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>teacher</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>15</td>
+                                <td>15</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <th>646</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>other</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <th>647</th>
+                                <td>MS</td>
+                                <td>M</td>
+                                <td>17</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>services</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>648</th>
+                                <td>MS</td>
+                                <td>M</td>
+                                <td>18</td>
+                                <td>R</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>services</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>11</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>5 rows × 33 columns</p>
+                    </div>
                 </div>
 
             </div>
@@ -20898,9 +21415,8 @@ memory usage: 102.0+ KB
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat_not_null</span><span
-                            class="o">.</span><span class="n">shape</span><span class="p">[</span><span
-                            class="mi">0</span><span class="p">]</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span
+                            class="o">.</span><span class="n">shape</span>
 </pre>
                     </div>
 
@@ -20922,7 +21438,7 @@ memory usage: 102.0+ KB
 
                 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
                      data-mime-type="text/plain">
-                    <pre>395</pre>
+                    <pre>(1044, 33)</pre>
                 </div>
 
             </div>
@@ -20932,477 +21448,13 @@ memory usage: 102.0+ KB
     </div>
 
 </div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span> <span class="o">=</span> <span
-                            class="n">df_mat_not_null</span>
-</pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-        <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
-            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-
-
-        <div class="jp-OutputArea jp-Cell-outputArea">
-
-            <div class="jp-OutputArea-child">
-
-
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
-
-
-                <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
-                     data-mime-type="text/html">
-                    <div>
-                        <style scoped>
-                            .dataframe tbody tr th:only-of-type {
-                                vertical-align: middle;
-                            }
-
-                            .dataframe tbody tr th {
-                                vertical-align: top;
-                            }
-
-                            .dataframe thead th {
-                                text-align: right;
-                            }
-                        </style>
-                        <table border="1" class="dataframe">
-                            <thead>
-                            <tr style="text-align: right;">
-                                <th></th>
-                                <th>school</th>
-                                <th>sex</th>
-                                <th>age</th>
-                                <th>address</th>
-                                <th>famsize</th>
-                                <th>Pstatus</th>
-                                <th>Medu</th>
-                                <th>Fedu</th>
-                                <th>Mjob</th>
-                                <th>Fjob</th>
-                                <th>...</th>
-                                <th>famrel</th>
-                                <th>freetime</th>
-                                <th>goout</th>
-                                <th>Dalc</th>
-                                <th>Walc</th>
-                                <th>health</th>
-                                <th>absences</th>
-                                <th>G1</th>
-                                <th>G2</th>
-                                <th>G3</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th>0</th>
-                                <td>GP</td>
-                                <td>F</td>
-                                <td>18</td>
-                                <td>U</td>
-                                <td>GT3</td>
-                                <td>A</td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>at_home</td>
-                                <td>teacher</td>
-                                <td>...</td>
-                                <td>4</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>6</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <th>1</th>
-                                <td>GP</td>
-                                <td>F</td>
-                                <td>17</td>
-                                <td>U</td>
-                                <td>GT3</td>
-                                <td>T</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>at_home</td>
-                                <td>other</td>
-                                <td>...</td>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <th>2</th>
-                                <td>GP</td>
-                                <td>F</td>
-                                <td>15</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>T</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>at_home</td>
-                                <td>other</td>
-                                <td>...</td>
-                                <td>4</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>10</td>
-                                <td>7</td>
-                                <td>8</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th>3</th>
-                                <td>GP</td>
-                                <td>F</td>
-                                <td>15</td>
-                                <td>U</td>
-                                <td>GT3</td>
-                                <td>T</td>
-                                <td>4</td>
-                                <td>2</td>
-                                <td>health</td>
-                                <td>services</td>
-                                <td>...</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>5</td>
-                                <td>2</td>
-                                <td>15</td>
-                                <td>14</td>
-                                <td>15</td>
-                            </tr>
-                            <tr>
-                                <th>4</th>
-                                <td>GP</td>
-                                <td>F</td>
-                                <td>16</td>
-                                <td>U</td>
-                                <td>GT3</td>
-                                <td>T</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>other</td>
-                                <td>other</td>
-                                <td>...</td>
-                                <td>4</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>5</td>
-                                <td>4</td>
-                                <td>6</td>
-                                <td>10</td>
-                                <td>10</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <p>5 rows × 33 columns</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-        <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">tail</span><span class="p">()</span>
-</pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-
-
-        <div class="jp-OutputArea jp-Cell-outputArea">
-
-            <div class="jp-OutputArea-child">
-
-
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
-
-
-                <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
-                     data-mime-type="text/html">
-                    <div>
-                        <style scoped>
-                            .dataframe tbody tr th:only-of-type {
-                                vertical-align: middle;
-                            }
-
-                            .dataframe tbody tr th {
-                                vertical-align: top;
-                            }
-
-                            .dataframe thead th {
-                                text-align: right;
-                            }
-                        </style>
-                        <table border="1" class="dataframe">
-                            <thead>
-                            <tr style="text-align: right;">
-                                <th></th>
-                                <th>school</th>
-                                <th>sex</th>
-                                <th>age</th>
-                                <th>address</th>
-                                <th>famsize</th>
-                                <th>Pstatus</th>
-                                <th>Medu</th>
-                                <th>Fedu</th>
-                                <th>Mjob</th>
-                                <th>Fjob</th>
-                                <th>...</th>
-                                <th>famrel</th>
-                                <th>freetime</th>
-                                <th>goout</th>
-                                <th>Dalc</th>
-                                <th>Walc</th>
-                                <th>health</th>
-                                <th>absences</th>
-                                <th>G1</th>
-                                <th>G2</th>
-                                <th>G3</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th>390</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>20</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>A</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>services</td>
-                                <td>services</td>
-                                <td>...</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>4</td>
-                                <td>11</td>
-                                <td>9</td>
-                                <td>9</td>
-                                <td>9</td>
-                            </tr>
-                            <tr>
-                                <th>391</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>17</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>T</td>
-                                <td>3</td>
-                                <td>1</td>
-                                <td>services</td>
-                                <td>services</td>
-                                <td>...</td>
-                                <td>2</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>14</td>
-                                <td>16</td>
-                                <td>16</td>
-                            </tr>
-                            <tr>
-                                <th>392</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>21</td>
-                                <td>R</td>
-                                <td>GT3</td>
-                                <td>T</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>other</td>
-                                <td>other</td>
-                                <td>...</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>10</td>
-                                <td>8</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <th>393</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>18</td>
-                                <td>R</td>
-                                <td>LE3</td>
-                                <td>T</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>services</td>
-                                <td>other</td>
-                                <td>...</td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>0</td>
-                                <td>11</td>
-                                <td>12</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th>394</th>
-                                <td>MS</td>
-                                <td>M</td>
-                                <td>19</td>
-                                <td>U</td>
-                                <td>LE3</td>
-                                <td>T</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>other</td>
-                                <td>at_home</td>
-                                <td>...</td>
-                                <td>3</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>5</td>
-                                <td>5</td>
-                                <td>8</td>
-                                <td>9</td>
-                                <td>9</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <p>5 rows × 33 columns</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-        <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">shape</span>
-</pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-
-
-        <div class="jp-OutputArea jp-Cell-outputArea">
-
-            <div class="jp-OutputArea-child">
-
-
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
-
-
-                <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
-                     data-mime-type="text/plain">
-                    <pre>(395, 33)</pre>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-        <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-                <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span
                             class="o">.</span><span class="n">shape</span><span class="p">[</span><span
                             class="mi">0</span><span class="p">]</span>
 </pre>
@@ -21421,12 +21473,12 @@ memory usage: 102.0+ KB
             <div class="jp-OutputArea-child">
 
 
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
                 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
                      data-mime-type="text/plain">
-                    <pre>395</pre>
+                    <pre>1044</pre>
                 </div>
 
             </div>
@@ -21439,10 +21491,10 @@ memory usage: 102.0+ KB
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span
                             class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre>
                     </div>
@@ -21465,45 +21517,45 @@ memory usage: 102.0+ KB
 
                 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Int64Index: 395 entries, 0 to 394
+Int64Index: 1044 entries, 0 to 648
 Data columns (total 33 columns):
  #   Column      Non-Null Count  Dtype
 ---  ------      --------------  -----
- 0   school      395 non-null    object
- 1   sex         395 non-null    object
- 2   age         395 non-null    int64
- 3   address     395 non-null    object
- 4   famsize     395 non-null    object
- 5   Pstatus     395 non-null    object
- 6   Medu        395 non-null    int64
- 7   Fedu        395 non-null    int64
- 8   Mjob        395 non-null    object
- 9   Fjob        395 non-null    object
- 10  reason      395 non-null    object
- 11  guardian    395 non-null    object
- 12  traveltime  395 non-null    int64
- 13  studytime   395 non-null    int64
- 14  failures    395 non-null    int64
- 15  schoolsup   395 non-null    object
- 16  famsup      395 non-null    object
- 17  paid        395 non-null    object
- 18  activities  395 non-null    object
- 19  nursery     395 non-null    object
- 20  higher      395 non-null    object
- 21  internet    395 non-null    object
- 22  romantic    395 non-null    object
- 23  famrel      395 non-null    int64
- 24  freetime    395 non-null    int64
- 25  goout       395 non-null    int64
- 26  Dalc        395 non-null    int64
- 27  Walc        395 non-null    int64
- 28  health      395 non-null    int64
- 29  absences    395 non-null    int64
- 30  G1          395 non-null    int64
- 31  G2          395 non-null    int64
- 32  G3          395 non-null    int64
+ 0   school      1044 non-null   object
+ 1   sex         1044 non-null   object
+ 2   age         1044 non-null   int64
+ 3   address     1044 non-null   object
+ 4   famsize     1044 non-null   object
+ 5   Pstatus     1044 non-null   object
+ 6   Medu        1044 non-null   int64
+ 7   Fedu        1044 non-null   int64
+ 8   Mjob        1044 non-null   object
+ 9   Fjob        1044 non-null   object
+ 10  reason      1044 non-null   object
+ 11  guardian    1044 non-null   object
+ 12  traveltime  1044 non-null   int64
+ 13  studytime   1044 non-null   int64
+ 14  failures    1044 non-null   int64
+ 15  schoolsup   1044 non-null   object
+ 16  famsup      1044 non-null   object
+ 17  paid        1044 non-null   object
+ 18  activities  1044 non-null   object
+ 19  nursery     1044 non-null   object
+ 20  higher      1044 non-null   object
+ 21  internet    1044 non-null   object
+ 22  romantic    1044 non-null   object
+ 23  famrel      1044 non-null   int64
+ 24  freetime    1044 non-null   int64
+ 25  goout       1044 non-null   int64
+ 26  Dalc        1044 non-null   int64
+ 27  Walc        1044 non-null   int64
+ 28  health      1044 non-null   int64
+ 29  absences    1044 non-null   int64
+ 30  G1          1044 non-null   int64
+ 31  G2          1044 non-null   int64
+ 32  G3          1044 non-null   int64
 dtypes: int64(16), object(17)
-memory usage: 104.9+ KB
+memory usage: 277.3+ KB
 </pre>
                 </div>
             </div>
@@ -21516,10 +21568,10 @@ memory usage: 104.9+ KB
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span
                             class="o">.</span><span class="n">columns</span>
 </pre>
                     </div>
@@ -21537,7 +21589,7 @@ memory usage: 104.9+ KB
             <div class="jp-OutputArea-child">
 
 
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
                 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
@@ -21560,11 +21612,13 @@ memory usage: 104.9+ KB
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
-            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
-                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_mat</span><span
-                            class="o">.</span><span class="n">describe</span><span class="p">()</span>
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span
+                            class="o">.</span><span class="n">describe</span><span class="p">()</span><span
+                            class="o">.</span><span class="n">round</span><span class="p">(</span><span
+                            class="mi">2</span><span class="p">)</span>
 </pre>
                     </div>
 
@@ -21581,7 +21635,7 @@ memory usage: 104.9+ KB
             <div class="jp-OutputArea-child">
 
 
-                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
                 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
@@ -21625,155 +21679,155 @@ memory usage: 104.9+ KB
                             <tbody>
                             <tr>
                                 <th>count</th>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
-                                <td>395.000000</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
+                                <td>1044.00</td>
                             </tr>
                             <tr>
                                 <th>mean</th>
-                                <td>16.696203</td>
-                                <td>2.749367</td>
-                                <td>2.521519</td>
-                                <td>1.448101</td>
-                                <td>2.035443</td>
-                                <td>0.334177</td>
-                                <td>3.944304</td>
-                                <td>3.235443</td>
-                                <td>3.108861</td>
-                                <td>1.481013</td>
-                                <td>2.291139</td>
-                                <td>3.554430</td>
-                                <td>5.708861</td>
-                                <td>10.908861</td>
-                                <td>10.713924</td>
-                                <td>10.415190</td>
+                                <td>16.73</td>
+                                <td>2.60</td>
+                                <td>2.39</td>
+                                <td>1.52</td>
+                                <td>1.97</td>
+                                <td>0.26</td>
+                                <td>3.94</td>
+                                <td>3.20</td>
+                                <td>3.16</td>
+                                <td>1.49</td>
+                                <td>2.28</td>
+                                <td>3.54</td>
+                                <td>4.43</td>
+                                <td>11.21</td>
+                                <td>11.25</td>
+                                <td>11.34</td>
                             </tr>
                             <tr>
                                 <th>std</th>
-                                <td>1.276043</td>
-                                <td>1.094735</td>
-                                <td>1.088201</td>
-                                <td>0.697505</td>
-                                <td>0.839240</td>
-                                <td>0.743651</td>
-                                <td>0.896659</td>
-                                <td>0.998862</td>
-                                <td>1.113278</td>
-                                <td>0.890741</td>
-                                <td>1.287897</td>
-                                <td>1.390303</td>
-                                <td>8.003096</td>
-                                <td>3.319195</td>
-                                <td>3.761505</td>
-                                <td>4.581443</td>
+                                <td>1.24</td>
+                                <td>1.12</td>
+                                <td>1.10</td>
+                                <td>0.73</td>
+                                <td>0.83</td>
+                                <td>0.66</td>
+                                <td>0.93</td>
+                                <td>1.03</td>
+                                <td>1.15</td>
+                                <td>0.91</td>
+                                <td>1.29</td>
+                                <td>1.42</td>
+                                <td>6.21</td>
+                                <td>2.98</td>
+                                <td>3.29</td>
+                                <td>3.86</td>
                             </tr>
                             <tr>
                                 <th>min</th>
-                                <td>15.000000</td>
-                                <td>0.000000</td>
-                                <td>0.000000</td>
-                                <td>1.000000</td>
-                                <td>1.000000</td>
-                                <td>0.000000</td>
-                                <td>1.000000</td>
-                                <td>1.000000</td>
-                                <td>1.000000</td>
-                                <td>1.000000</td>
-                                <td>1.000000</td>
-                                <td>1.000000</td>
-                                <td>0.000000</td>
-                                <td>3.000000</td>
-                                <td>0.000000</td>
-                                <td>0.000000</td>
+                                <td>15.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>0.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
                             </tr>
                             <tr>
                                 <th>25%</th>
-                                <td>16.000000</td>
-                                <td>2.000000</td>
-                                <td>2.000000</td>
-                                <td>1.000000</td>
-                                <td>1.000000</td>
-                                <td>0.000000</td>
-                                <td>4.000000</td>
-                                <td>3.000000</td>
-                                <td>2.000000</td>
-                                <td>1.000000</td>
-                                <td>1.000000</td>
-                                <td>3.000000</td>
-                                <td>0.000000</td>
-                                <td>8.000000</td>
-                                <td>9.000000</td>
-                                <td>8.000000</td>
+                                <td>16.00</td>
+                                <td>2.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>0.00</td>
+                                <td>4.00</td>
+                                <td>3.00</td>
+                                <td>2.00</td>
+                                <td>1.00</td>
+                                <td>1.00</td>
+                                <td>3.00</td>
+                                <td>0.00</td>
+                                <td>9.00</td>
+                                <td>9.00</td>
+                                <td>10.00</td>
                             </tr>
                             <tr>
                                 <th>50%</th>
-                                <td>17.000000</td>
-                                <td>3.000000</td>
-                                <td>2.000000</td>
-                                <td>1.000000</td>
-                                <td>2.000000</td>
-                                <td>0.000000</td>
-                                <td>4.000000</td>
-                                <td>3.000000</td>
-                                <td>3.000000</td>
-                                <td>1.000000</td>
-                                <td>2.000000</td>
-                                <td>4.000000</td>
-                                <td>4.000000</td>
-                                <td>11.000000</td>
-                                <td>11.000000</td>
-                                <td>11.000000</td>
+                                <td>17.00</td>
+                                <td>3.00</td>
+                                <td>2.00</td>
+                                <td>1.00</td>
+                                <td>2.00</td>
+                                <td>0.00</td>
+                                <td>4.00</td>
+                                <td>3.00</td>
+                                <td>3.00</td>
+                                <td>1.00</td>
+                                <td>2.00</td>
+                                <td>4.00</td>
+                                <td>2.00</td>
+                                <td>11.00</td>
+                                <td>11.00</td>
+                                <td>11.00</td>
                             </tr>
                             <tr>
                                 <th>75%</th>
-                                <td>18.000000</td>
-                                <td>4.000000</td>
-                                <td>3.000000</td>
-                                <td>2.000000</td>
-                                <td>2.000000</td>
-                                <td>0.000000</td>
-                                <td>5.000000</td>
-                                <td>4.000000</td>
-                                <td>4.000000</td>
-                                <td>2.000000</td>
-                                <td>3.000000</td>
-                                <td>5.000000</td>
-                                <td>8.000000</td>
-                                <td>13.000000</td>
-                                <td>13.000000</td>
-                                <td>14.000000</td>
+                                <td>18.00</td>
+                                <td>4.00</td>
+                                <td>3.00</td>
+                                <td>2.00</td>
+                                <td>2.00</td>
+                                <td>0.00</td>
+                                <td>5.00</td>
+                                <td>4.00</td>
+                                <td>4.00</td>
+                                <td>2.00</td>
+                                <td>3.00</td>
+                                <td>5.00</td>
+                                <td>6.00</td>
+                                <td>13.00</td>
+                                <td>13.00</td>
+                                <td>14.00</td>
                             </tr>
                             <tr>
                                 <th>max</th>
-                                <td>22.000000</td>
-                                <td>4.000000</td>
-                                <td>4.000000</td>
-                                <td>4.000000</td>
-                                <td>4.000000</td>
-                                <td>3.000000</td>
-                                <td>5.000000</td>
-                                <td>5.000000</td>
-                                <td>5.000000</td>
-                                <td>5.000000</td>
-                                <td>5.000000</td>
-                                <td>5.000000</td>
-                                <td>75.000000</td>
-                                <td>19.000000</td>
-                                <td>19.000000</td>
-                                <td>20.000000</td>
+                                <td>22.00</td>
+                                <td>4.00</td>
+                                <td>4.00</td>
+                                <td>4.00</td>
+                                <td>4.00</td>
+                                <td>3.00</td>
+                                <td>5.00</td>
+                                <td>5.00</td>
+                                <td>5.00</td>
+                                <td>5.00</td>
+                                <td>5.00</td>
+                                <td>5.00</td>
+                                <td>75.00</td>
+                                <td>19.00</td>
+                                <td>19.00</td>
+                                <td>20.00</td>
                             </tr>
                             </tbody>
                         </table>
@@ -21790,7 +21844,523 @@ memory usage: 104.9+ KB
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
     <div class="jp-Cell-inputWrapper">
         <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span
+                            class="o">=</span> <span class="n">merged_df</span><span class="o">.</span><span class="n">loc</span><span
+                            class="p">[:,</span> <span class="n">merged_df</span><span class="o">.</span><span
+                            class="n">columns</span> <span class="o">!=</span> <span class="s1">&#39;G3&#39;</span><span
+                            class="p">]</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+
+
+        <div class="jp-OutputArea jp-Cell-outputArea">
+
+            <div class="jp-OutputArea-child">
+
+
+                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+
+
+                <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult"
+                     data-mime-type="text/html">
+                    <div>
+                        <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                                vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                                vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                                text-align: right;
+                            }
+                        </style>
+                        <table border="1" class="dataframe">
+                            <thead>
+                            <tr style="text-align: right;">
+                                <th></th>
+                                <th>school</th>
+                                <th>sex</th>
+                                <th>age</th>
+                                <th>address</th>
+                                <th>famsize</th>
+                                <th>Pstatus</th>
+                                <th>Medu</th>
+                                <th>Fedu</th>
+                                <th>Mjob</th>
+                                <th>Fjob</th>
+                                <th>...</th>
+                                <th>romantic</th>
+                                <th>famrel</th>
+                                <th>freetime</th>
+                                <th>goout</th>
+                                <th>Dalc</th>
+                                <th>Walc</th>
+                                <th>health</th>
+                                <th>absences</th>
+                                <th>G1</th>
+                                <th>G2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>0</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>A</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>at_home</td>
+                                <td>teacher</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>17</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>at_home</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>15</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>at_home</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>7</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>15</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>health</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>yes</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>15</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>GP</td>
+                                <td>F</td>
+                                <td>16</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>other</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <th>644</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>19</td>
+                                <td>R</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>services</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <th>645</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>teacher</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>15</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <th>646</th>
+                                <td>MS</td>
+                                <td>F</td>
+                                <td>18</td>
+                                <td>U</td>
+                                <td>GT3</td>
+                                <td>T</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>other</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>11</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th>647</th>
+                                <td>MS</td>
+                                <td>M</td>
+                                <td>17</td>
+                                <td>U</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>services</td>
+                                <td>services</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>648</th>
+                                <td>MS</td>
+                                <td>M</td>
+                                <td>18</td>
+                                <td>R</td>
+                                <td>LE3</td>
+                                <td>T</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>services</td>
+                                <td>other</td>
+                                <td>...</td>
+                                <td>no</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>1044 rows × 32 columns</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span
+                            class="o">=</span> <span class="n">merged_df</span><span class="o">.</span><span class="n">loc</span><span
+                            class="p">[:,</span> <span class="s1">&#39;G3&#39;</span><span class="p">]</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
             <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+
+
+        <div class="jp-OutputArea jp-Cell-outputArea">
+
+            <div class="jp-OutputArea-child">
+
+
+                <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+
+
+                <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult"
+                     data-mime-type="text/plain">
+<pre>0       6
+1       6
+2      10
+3      15
+4      10
+       ..
+644    10
+645    16
+646     9
+647    10
+648    11
+Name: G3, Length: 1044, dtype: int64</pre>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span
+                            class="kn">import</span> <span class="n">LabelEncoder</span><span class="p">,</span> <span
+                            class="n">OneHotEncoder</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+            <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+                <div class="CodeMirror cm-s-jupyter">
+                    <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span
+                            class="n">i</span> <span class="ow">in</span> <span
+                            class="n">variables_to_labelEncode</span><span class="p">:</span>
+    <span class="n">X</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span
+                                class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">labelEncoder_X</span><span
+                                class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span
+                                class="n">X</span><span class="o">.</span><span class="n">iloc</span><span
+                                class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+</pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+
+
+        <div class="jp-OutputArea jp-Cell-outputArea">
+
+            <div class="jp-OutputArea-child">
+
+
+                <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+                <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-26-51395f4b340c&gt;</span> in <span
+        class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span
+        class="ansi-yellow-intense-fg ansi-bold"> </span><span
+        class="ansi-green-intense-fg ansi-bold">for</span> i <span class="ansi-green-intense-fg ansi-bold">in</span> variables_to_labelEncode<span
+        class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">      2</span>     X<span class="ansi-yellow-intense-fg ansi-bold">.</span>iloc<span
+        class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span
+        class="ansi-yellow-intense-fg ansi-bold">,</span> i<span class="ansi-yellow-intense-fg ansi-bold">]</span> <span
+        class="ansi-yellow-intense-fg ansi-bold">=</span> labelEncoder_X<span
+        class="ansi-yellow-intense-fg ansi-bold">.</span>fit_transform<span
+        class="ansi-yellow-intense-fg ansi-bold">(</span>X<span
+        class="ansi-yellow-intense-fg ansi-bold">.</span>iloc<span
+        class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span
+        class="ansi-yellow-intense-fg ansi-bold">,</span> i<span class="ansi-yellow-intense-fg ansi-bold">]</span><span
+        class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      3</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;variables_to_labelEncode&#39; is not defined</pre>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+        <div class="jp-InputArea jp-Cell-inputArea">
+            <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
             <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
                 <div class="CodeMirror cm-s-jupyter">
                     <div class=" highlight hl-ipython3"><pre><span></span>
